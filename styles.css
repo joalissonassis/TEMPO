@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url("https://loremflickr.com/1600/900/nature,landscape");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.caixa-maior {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 450px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.input-cidade {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #7c7c7c2b;
+  color: #fff;
+  font-size: 20px;
+  width: calc(100% -100px);
+}
+
+.botao {
+  padding: 10px;
+  border: none;
+  background-color: #7c7c7c2b;
+  border-radius: 50%;
+  margin-left: 8px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.botao:hover {
+  background-color: #7c7c7c;
+  transform: scale(1.1);
+}
+
+.caixa-media {
+  margin-top: 30px;
+}
+.cidade {
+  font-size: 28px;
+  color: #fff;
+}
+
+.temp {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.umidade {
+  color: aliceblue;
+}
+.botao-ia {
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(14, 121, 252);
+  cursor: pointer;
+}
+.botao-ia:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+.resposta-ia {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+}

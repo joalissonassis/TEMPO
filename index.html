@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previsão do tempo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="caixa-maior">
+      <input class="input-cidade" placeholder="Digite a cidade" />
+
+      <button class="botao" onclick="detectaVoz()">
+        <img
+          src="/img/icons8-microfone-24.png"
+          alt="microfone"
+          class="img-botao"
+        />
+      </button>
+
+      <button class="botao" onclick="cliqueiNoBotao()">
+        <img
+          src="/img/icons8-pesquisar-24.png"
+          alt="buscar"
+          class="img-botao"
+        />
+      </button>
+
+      <div class="caixa-media"></div>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>
