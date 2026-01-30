@@ -1,4 +1,5 @@
 let chaveIa = "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";
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 async function cliqueiNoBotao() {
   let cidade = document.querySelector(".input-cidade").value;
