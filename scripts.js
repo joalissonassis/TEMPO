@@ -1,4 +1,4 @@
-let chaveIa = "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";
+let chaveIa = "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";
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 async function cliqueiNoBotao() {
@@ -19,7 +19,6 @@ async function cliqueiNoBotao() {
   <button class="botao-ia" onclick="pedirSugestaoRoupa()">Sugestão de Roupa</button>
   <p class="resposta-ia"></p>
   `;
-  console.log(dadosJson);
 }
 
 function detectaVoz() {
@@ -29,7 +28,7 @@ function detectaVoz() {
 
   reconhecimento.onresult = function (evento) {
     let textoTranscrito = evento.results[0][0].transcript;
-    document.querySelector(".imput-cidade").value = textoTranscrito;
+    document.querySelector(".input-cidade").value = textoTranscrito;
     cliqueiNoBotao();
   };
 }
@@ -64,5 +63,4 @@ async function pedirSugestaoRoupa() {
   let dados = await resposta.json();
   document.querySelector(".resposta-ia").innerHTML =
     dados.choices[0].message.content;
-  console.log(dados);
 }

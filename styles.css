@@ -21,6 +21,14 @@ body {
   width: 450px;
   padding: 20px;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.caixinha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .input-cidade {
@@ -43,9 +51,9 @@ body {
   float: right;
   display: flex;
   align-items: center;
-  justify-self: center;
   cursor: pointer;
   transition: 0.4s;
+  margin-top: 10px;
 }
 .botao:hover {
   background-color: #7c7c7c;
@@ -71,22 +79,81 @@ body {
   color: aliceblue;
 }
 .botao-ia {
-  border-radius: 10px;
   width: 100%;
   margin-top: 20px;
-  padding: 12px 20px;
+  padding: 14px 20px;
+
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
   color: #fff;
-  background-color: rgb(14, 121, 252);
   cursor: pointer;
+  border: none;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, rgb(14, 121, 252), rgb(79, 163, 255));
+
+  box-shadow:
+    0 10px 25px rgba(14, 121, 252, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.2s ease;
 }
+
+.botao-ia:hover {
+  filter: brightness(1.1);
+  box-shadow:
+    0 14px 35px rgba(14, 121, 252, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
 .botao-ia:active {
-  transform: scale(0.98);
-  opacity: 0.8;
+  transform: scale(0.96);
+  box-shadow:
+    0 6px 15px rgba(14, 121, 252, 0.4),
+    inset 0 3px 6px rgba(0, 0, 0, 0.35);
 }
+
 .resposta-ia {
   color: #fff;
   margin-top: 15px;
   font-size: 14px;
   line-height: 1.5;
+}
+
+@media (max-width: 420px) {
+  .caixa-maior {
+    width: 100%;
+  }
+
+  /* INPUT ocupa toda a largura */
+  .input-cidade {
+    width: 95%;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  /* Botões descem para baixo do input */
+  .caixinha {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Botões ficam iguais e alinhados */
+  .botao {
+    float: none;
+    margin: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
